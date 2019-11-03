@@ -1,16 +1,23 @@
 {
-  "name": "Ski bindings calculator",
+  "name": "calc_only",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "dziobakwszafie",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dziobakwszafie/calc_only.git"
+  },
+  "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/dziobakwszafie/calc_only",
-  "dependencies": {
-    "gh-pages": "^2.1.1"
-  }
+  "bugs": {
+    "url": "https://github.com/dziobakwszafie/calc_only/issues"
+  },
+  "homepage": "https://github.com/dziobakwszafie/calc_only#readme"
 }
