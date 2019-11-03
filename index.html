@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Przed nartami</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta property="description" content="Mały niezbędnik dla każdego początkujacego jak i zaawansowanego narciarza.">
+	<link rel="stylesheet" type="text/css" href="scss/ski-web-v.4.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/7517802c18.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<header>
+       
+	</header>
+	<main>
+		<!--calc-->
+		<div class="calc-title">
+			<h2><img id="ski-icon" src="img/Ski.ico" alt="ski icon">Kalkulator siły wypięcia wiązania</h2>
+			<div class="small_box">
+				<div class="t1">
+					Aby okreslić wartość jaką ustawiamy na wiazaniu, należy uwzglednić kilka czynników, indywidualnych dla każdej osoby.
+				</div>
+				<div class="t2">
+					Przede wszystkim musisz przyporządkowac się do jednej z grup zaawansowania, pokazanych poniżej. Po najechaniu kursorem rozwinie się krótki opis danej kategorii. 
+				</div>
+				<div class="t3">
+					Parametry wybieraj z list rozwijanych, po wybraniu wszystkich, automatycznie pokaże się wynik. Jeżeli zauważysz X, to znaczy, że niestety nie mieścisz sie w żadnej z grup. 
+				</div>
+			</div>
+		</div>
+		<div class="calc" id="calc">
+			<div class="box1">
+				<div class="cont-card">
+					<div class="card">
+						<div class="face face1">	
+							<div class="dots">
+								<i class="fas fa-minus-circle"></i>
+								<i class="far fa-circle"></i>
+								<i class="far fa-circle"></i>
+							</div>
+							<h3>Świeżak</h3>					
+						</div>
+						<div class="face face2">						
+							<p id="hover-desc">Pierwszy raz na nartach. Fajnie by było gdybyś przeżył ale nie jesteś zbyt nachalny w tych oczekiwaniach. Jeździsz powoli i ostrożnie, po ratrakowanych stokach.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="face face1">	
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="far fa-circle"></i>
+								<i class="far fa-circle"></i>
+							</div>
+							<h3>Niedzielny Janusz</h3>
+						</div>
+						<div class="face face2">						
+							<p id="hover-desc">Ze szwagrem kupujesz raz na sezon całodzienny w Szczyrku i dziczysz aż do otwartego złamania. Ewentulanie jeździsz już trochę ale bez szaleństw i niezbyt szybko.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="face face1">	
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+								<i class="far fa-circle"></i>
+							</div>
+							<h3>Zwykły ludź</h3>					
+						</div>
+						<div class="face face2">						
+							<p id="hover-desc">Pakujesz w niedziele kaszojady i żonę do rodzinnej Skody Octavii i ciśniesz na Biały Krzyż. Jeździsz w miarę dobrze i czasem szybciej. Czasem zjedziesz poza trasę.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="face face1">	
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+							</div>
+							<h3>Dzik</h3>					
+						</div>
+						<div class="face face2">						
+							<p id="hover-desc">Parę razy byłeś na tyczkach ale nie pykło. Triggerują Cię janusze co blokują Golgotę jadąc ześlizgiem. Ciśniesz agresywnie po stromym jak i poza trasą.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="face face1">	
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-plus-circle"></i>
+							</div>
+							<h3>Turbodzik</h3>					
+						</div>
+						<div class="face face2">						
+							<p id="hover-desc">Nakurwiasz slalom jak pojebany. Kasprowy to Świnto Góro i umisz skręcać z karwinga. Generalnie to siła, prędkość, styl, pyk pyk.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="big-box">
+				<div class="box2">
+					<select class="level" id="level" onclick="calc()">
+						<option selected disabled value="">POZIOM</option>
+						<option value="-1">ŚWIEŻAK</option>
+						<option value="0">NIEDZIELNY JANUSZ</option>
+						<option value="1">ZWYKŁY LUDŹ</option>
+						<option value="2">DZIK</option>
+						<option value="3">TURBODZIK</option>
+					</select>
+					<select class="height" id="height" onclick="calc()">
+						<option selected disabled value="">WZROST</option>
+						<option value="8">0-148 cm</option>
+						<option value="9">149-157 cm</option>
+						<option value="10">158-166 cm</option>
+						<option value="11">167-178 cm</option>
+						<option value="12">179-194 cm</option>
+						<option value="13">195+ cm</option>
+					</select>
+					<select class="weight" id="weight" onclick="calc()">
+						<option selected disabled value="">WAGA</option>
+						<option value="1">10-13 kg</option>
+						<option value="2">14-17 kg</option>
+						<option value="3">18-21 kg</option>
+						<option value="4">22-25 kg</option>
+						<option value="5">26-30 kg</option>
+						<option value="6">30-35 kg</option>
+						<option value="7">36-41 kg</option>
+						<option value="8">42-48 kg</option>
+						<option value="9">49-57 kg</option>
+						<option value="10">58-66 kg</option>
+						<option value="11">67-78 kg</option>
+						<option value="12">79-94 kg</option>
+						<option value="13">95+ kg</option>
+					</select>
+					<select class="age" id="age" onclick="calc()">
+						<option selected disabled value="">WIEK</option>
+						<option value="-1">0-9 lub 50+ lat</option>
+						<option value="0">10-49 lat</option>
+					</select>
+					<select class="boot" id="boot" onclick="calc()">
+						<option selected disabled value="">DŁ. BUTA</option>
+						<option value="0">0-230 mm</option>
+						<option value="1">231-250 mm</option>
+						<option value="2">251-270 mm</option>
+						<option value="3">271-290 mm</option>
+						<option value="4">291-310 mm</option>
+						<option value="5">311-330 mm</option>
+						<option value="6">331-350 mm</option>
+						<option value="7">351+ mm</option>
+					</select>
+				</div>
+				<div class="box3">
+					<div id="result"></div>
+				</div>
+			</div>
+			<div class="box4">
+				<h3>Pozor!</h3>
+				Wartość tutaj obliczona jest wartością teoretyczną i choć jest ona miarodajna to nie należy jej brac bezkrytycznie.
+				Wynika to z faktu, iż sprężyny w wiązaniach wraz z upływem czasu zmieniają swoje parametry.
+				Jeśli masz stare wiązanie obliczona siła może być zbyt niska i wiązanie może wypinać zbyt wcześnie.
+				W celu dokladnego sprawdzenia potrzebnej siły wypięcia najlepiej udać się do porządnego serwisu, gdzie przy pomocy maszyny ustala się siłę wypięcia.
+				Jazda ze źle ustawionym wiązaniem jest prostą drogą do złamania kulfona więc polecam pochylić się nad tematem. 
+				Kalkulator wykonany w oparciu o wytyczne Salomona na sezon 17/18.
+			</div>	
+		</div>
+	</main>
+	<footer>
+		<div class="madeby">
+			made by dziobakwszafie 2019
+		</div>
+	</footer>
+</body>
+</html>
