@@ -56,16 +56,32 @@ $bgFaceColor: #383838;
 }
 .small_box{
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   max-width: 1000px;
   font-size: $textMedium;
+  background: $bgFaceColor;
+  padding: 3px;
+  border-radius: 10px;
 }
 .t1,
 .t2,
 .t3{
-  max-width: 300px;
+  max-width: 290px;
   text-align: center;
   margin: 0 20px;
+}
+@media screen and (max-width:1020px){
+  .small_box{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+  .t1,
+  .t2,
+  .t3{
+    max-width: 100%;
+    margin-top: 10px;
+}
 }
 .calc{
   @include center-ii(flex, center, center);
