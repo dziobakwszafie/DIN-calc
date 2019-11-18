@@ -107,7 +107,6 @@ body {
   width: 100%;
   margin: auto;
   max-width: 1000px;
-  min-width: 400px;
   font-size: 0.8em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -461,6 +460,10 @@ body {
   padding: 15px;
   font-size: 0.8em;
   line-height: 2em;
+}
+
+.box4 p {
+  margin-top: 2em;
 }
 
 /*footer*/
