@@ -88,7 +88,7 @@ $bgFaceColor: #383838;
   width: 100%;
   margin: auto;
   max-width: 1000px;
-  min-width: 400px;
+
   font-size: $textMedium;
   flex-direction: column;
 }
@@ -282,6 +282,9 @@ $bgFaceColor: #383838;
   padding: 15px;
   font-size: $textMedium;
   line-height: 2em;
+  p{
+    margin-top: 2em;
+  }
 }
 
 
