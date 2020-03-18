@@ -10,6 +10,6 @@ Calculator used for specify release force of ski bindings.
 
 ## Current Status
 
-v.1.x finished 
+:heavy_check_mark: v.1 finished 
 
-redesign planned
+:o: redesign planned
