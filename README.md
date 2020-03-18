@@ -12,4 +12,4 @@ Calculator used for specify release force of ski bindings.
 
 :heavy_check_mark: v.1 finished 
 
-> redesign planned
+> redesign planned - move to [v.2](https://github.com/dziobakwszafie/przed-nartami-calc-v.2)
