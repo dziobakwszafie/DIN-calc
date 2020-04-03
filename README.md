@@ -8,7 +8,7 @@ Calculator used for specify release force of ski bindings.
 - CSS3 + Sass
 - Javascript
 
-## Current Status
+## Project Status
 
 :heavy_check_mark: v.1 finished 
 
