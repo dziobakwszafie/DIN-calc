@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>DIN Kalkulator</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      property="description"
+      content="Mały niezbędnik dla każdego początkujacego jak i zaawansowanego narciarza."
+    />
+    <!--Styling-->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7517802c18.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Javascript-->
+    <script src="./js/app.js"></script>
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/parallax.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Kalkulator siły wypięcia wiązania</h1>
+    </header>
+    <main>
+      <section>
+        <div class="text">
+          <p>
+            Aby okreslić wartość jaką ustawiamy na wiazaniu, należy uwzglednić
+            kilka czynników, indywidualnych dla każdej osoby. Poniżej pomoc w
+            okresleniu poziomu.
+          </p>
+          <h2>Typy narciarzy</h2>
+          <ul>
+            <li>
+              <b class="first">Świeżak</b>
+              - pierwszy raz na nartach. Fajnie by było gdybyś przeżył ale nie
+              jesteś zbyt nachalny w tych oczekiwaniach. Jeździsz powoli i
+              ostrożnie, po ratrakowanych stokach.
+            </li>
+            <li>
+              <b class="second">Niedzielny Janusz</b>
+              - ze szwagrem kupujesz raz na sezon całodzienny w Szczyrku i
+              dziczysz aż do otwartego złamania. Ewentulanie jeździsz już trochę
+              ale bez szaleństw i niezbyt szybko.
+            </li>
+
+            <li>
+              <b class="third">Zwykły ludź</b>
+              - pakujesz w niedziele kaszojady i żonę do rodzinnej Skody Octavii
+              i ciśniesz na Biały Krzyż. Jeździsz w miarę dobrze i czasem
+              szybciej. Czasem zjedziesz poza trasę.
+            </li>
+            <li>
+              <b class="fourth">Dzik</b>
+              - parę razy byłeś na tyczkach ale nie pykło. Triggerują Cię
+              janusze co blokują Golgotę jadąc ześlizgiem. Ciśniesz agresywnie
+              po stromym jak i poza trasą.
+            </li>
+            <li>
+              <b class="fifth">Turbodzik</b>
+              - nakurwiasz slalom jak pojebany. Kasprowy to Świnto Góro i umisz
+              skręcać z karwinga. Generalnie to siła, prędkość, styl, pyk pyk.
+            </li>
+          </ul>
+          <p>
+            Parametry wybieraj z list rozwijanych, po wybraniu wszystkich,
+            automatycznie pokaże się wynik. Jeżeli zauważysz X, to znaczy, że
+            niestety nie mieścisz sie w żadnej z grup.
+          </p>
+          <p>
+            Jazda ze źle ustawionym wiązaniem jest prostą drogą do złamania
+            kulfona więc polecam pochylić się nad tematem.
+          </p>
+          <div class="calculator">
+            <div class="columnOne">
+              <select class="level" id="level" onChange="calc()">
+                <option selected disabled value="">poziom</option>
+                <option value="-1">ŚWIEŻAK</option>
+                <option value="0">NIEDZIELNY JANUSZ</option>
+                <option value="1">ZWYKŁY LUDŹ</option>
+                <option value="2">DZIK</option>
+                <option value="3">TURBODZIK</option>
+              </select>
+              <select class="height" id="height" onChange="calc()">
+                <option selected disabled value="">wzrost</option>
+                <option value="8">0-148 cm</option>
+                <option value="9">149-157 cm</option>
+                <option value="10">158-166 cm</option>
+                <option value="11">167-178 cm</option>
+                <option value="12">179-194 cm</option>
+                <option value="13">195+ cm</option>
+              </select>
+              <select class="weight" id="weight" onChange="calc()">
+                <option selected disabled value="">waga</option>
+                <option value="1">10-13 kg</option>
+                <option value="2">14-17 kg</option>
+                <option value="3">18-21 kg</option>
+                <option value="4">22-25 kg</option>
+                <option value="5">26-30 kg</option>
+                <option value="6">30-35 kg</option>
+                <option value="7">36-41 kg</option>
+                <option value="8">42-48 kg</option>
+                <option value="9">49-57 kg</option>
+                <option value="10">58-66 kg</option>
+                <option value="11">67-78 kg</option>
+                <option value="12">79-94 kg</option>
+                <option value="13">95+ kg</option>
+              </select>
+              <select class="age" id="age" onChange="calc()">
+                <option selected disabled value="">wiek</option>
+                <option value="-1">0-9 lub 50+ lat</option>
+                <option value="0">10-49 lat</option>
+              </select>
+              <select class="boot" id="boot" onChange="calc()">
+                <option selected disabled value="">długość buta</option>
+                <option value="0">0-230 mm</option>
+                <option value="1">231-250 mm</option>
+                <option value="2">251-270 mm</option>
+                <option value="3">271-290 mm</option>
+                <option value="4">291-310 mm</option>
+                <option value="5">311-330 mm</option>
+                <option value="6">331-350 mm</option>
+                <option value="7">351+ mm</option>
+              </select>
+            </div>
+            <div class="columnTwo">
+              <div id="result"></div>
+            </div>
+          </div>
+          <div class="warning">
+            <h2>Pozor!</h2>
+            <p>
+              Wartość tutaj obliczona jest wartością teoretyczną i choć jest ona
+              miarodajna to nie należy jej brac bezkrytycznie.
+            </p>
+            <p>
+              Jeśli masz stare/zużyte wiązanie to sprężyny mogą być już
+              wyrobione. W celu dokladnego sprawdzenia potrzebnej siły wypięcia
+              można udać się do porządnego serwisu, gdzie przy pomocy maszyny
+              ustala się siłę wypięcia dla danej narty.
+            </p>
+            <p>
+              Kalkulator wykonany w oparciu o wytyczne Salomona na sezon 17/18.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="madeby">
+        <p>dziobakwszafie@gmail.com</p>
+        <p>made by dziobakwszafie 2020</p>
+      </div>
+    </footer>
+  </body>
+</html>
