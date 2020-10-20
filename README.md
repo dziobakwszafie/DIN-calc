@@ -4,8 +4,6 @@ Calculator used for specify release force of ski bindings.
 
 ![Version](https://img.shields.io/badge/Version-Finished-brightgreen)
 [![CodeFactor](https://www.codefactor.io/repository/github/dziobakwszafie/DIN-calc/badge)](https://www.codefactor.io/repository/github/dziobakwszafie/DIN-calc)
-![Success](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
-![David](https://img.shields.io/david/dziobakwszafie/DIN-calc?color=green)
 ![GitHub issues](https://img.shields.io/github/issues-raw/dziobakwszafie/DIN-calc)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/dziobakwszafie/DIN-calc)
 ![GitHub deployments](https://img.shields.io/github/deployments/dziobakwszafie/DIN-calc/github-pages?label=dh-pages%20deploy)
