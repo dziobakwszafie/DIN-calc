@@ -1,5 +1,5 @@
 {
-  "name": "calc_only",
+  "name": "din-calc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,16 +8,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dziobakwszafie/calc_only.git"
+    "url": "git+https://github.com/dziobakwszafie/DIN-calc.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dziobakwszafie/calc_only/issues"
+    "url": "https://github.com/dziobakwszafie/DIN-calc/issues"
   },
-  "homepage": "https://github.com/dziobakwszafie/calc_only#readme"
+  "homepage": "https://github.com/dziobakwszafie/DIN-calc#readme"
 }

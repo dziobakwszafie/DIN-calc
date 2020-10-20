@@ -1,0 +1,289 @@
+/***** user variables *****/
+
+$textSize1: 21px;
+$textSize2: 18px;
+$textSize3: 15px;
+
+$lineHeight1: 32px;
+$lineHeight2: 28px;
+$lineHeight3: 23px;
+
+$titleSize1: 40px;
+$titleSize2: 35px;
+$titleSize3: 25px;
+$titleSize4: 20px;
+
+$textColor1: #000;
+$textColor2: #fff;
+
+$titleColor1: #000;
+$titleColor2: #fff;
+$titleColor3: #bb2205;
+$titleColor4: #009688;
+$titleColor5: #f5b60a;
+$titleColor6: #0e9aa7;
+
+$bgColor1: #000;
+$bgColor2: #fff;
+$bgColor3: #bb2205;
+$bgColor4: #cc99c9;
+$bgColor5: #9ec1cf;
+$bgColor6: #9ee09e;
+$bgColor7: #feb144;
+$bgColor8: #ff6663;
+
+@mixin center-ic($flex, $align, $justify) {
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin center-ii($flex, $align, $justify) {
+  display: $flex;
+  align-items: $align;
+  justify-items: $justify;
+}
+
+@mixin center-ii($flex, $align, $justify) {
+  display: $flex;
+  align-items: $align;
+  justify-items: $justify;
+}
+
+/***** global settings *****/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bgColor2;
+  color: $textColor1;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 50px;
+  @include center-ic(flex, center, center);
+}
+
+section {
+  margin-top: 20px;
+
+  @include center-ic(flex, center, center);
+}
+
+/***** text sections *****/
+
+.intro {
+  flex-direction: column;
+
+  @include center-ic(flex, center, center);
+}
+
+.text {
+  margin: 20px auto;
+  max-width: 760px;
+
+  ul {
+    margin-left: 100px;
+
+    b {
+      padding: 7px;
+      border-radius: 15px;
+      @media (max-width: 767px) {
+        padding: 5px;
+        border-radius: 10px;
+      }
+    }
+
+    .first {
+      background-color: $bgColor4;
+    }
+    .second {
+      background-color: $bgColor5;
+    }
+    .third {
+      background-color: $bgColor6;
+    }
+    .fourth {
+      background-color: $bgColor7;
+    }
+    .fifth {
+      background-color: $bgColor8;
+    }
+
+    @media (min-width: 1025px) {
+      font-size: $textSize1;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: $textSize1;
+    }
+
+    @media (max-width: 767px) {
+      font-size: $textSize2;
+    }
+
+    @media (max-width: 640px) {
+      margin-left: 50px;
+      font-size: $textSize3;
+    }
+  }
+
+  @media (max-width: 760px) {
+    margin: auto 10%;
+  }
+}
+
+h1 {
+  float: left;
+  color: $textColor1;
+  font-weight: 700;
+  text-transform: uppercase;
+  @media (min-width: 1025px) {
+    font-size: $titleSize1;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: $titleSize2;
+  }
+
+  @media (max-width: 767px) {
+    font-size: $titleSize3;
+  }
+
+  @media (max-width: 640px) {
+    font-size: $titleSize4;
+  }
+}
+
+h2 {
+  margin: 2vw;
+  font-weight: 400;
+
+  @media (min-width: 1025px) {
+    font-size: $titleSize2;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: $titleSize3;
+  }
+
+  @media (max-width: 767px) {
+    font-size: $titleSize3;
+  }
+
+  @media (max-width: 640px) {
+    font-size: $titleSize4;
+  }
+}
+
+p {
+  margin: 2vw;
+
+  @media (min-width: 1025px) {
+    font-size: $textSize1;
+    line-height: $lineHeight1;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: $textSize1;
+    line-height: $lineHeight1;
+  }
+
+  @media (max-width: 767px) {
+    font-size: $textSize2;
+    line-height: $lineHeight2;
+  }
+
+  @media (max-width: 640px) {
+    font-size: $textSize3;
+    line-height: $lineHeight3;
+  }
+}
+
+li {
+  margin: 1vw auto;
+
+  @media (min-width: 1025px) {
+    font-size: $textSize1;
+    line-height: $lineHeight1;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: $textSize1;
+    line-height: $lineHeight1;
+  }
+
+  @media (max-width: 767px) {
+    font-size: $textSize2;
+    line-height: $lineHeight2;
+  }
+
+  @media (max-width: 640px) {
+    font-size: $textSize3;
+    line-height: $lineHeight3;
+  }
+}
+
+/***** calc *****/
+.calculator {
+  display: flex;
+  justify-content: space-around;
+  padding: 2vw;
+  border: solid 0.2vw $textColor1;
+  border-radius: 5px;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+
+.columnOne {
+  display: flex;
+  flex-direction: column;
+
+  select {
+    margin: 5px;
+    padding: 5px;
+    font-size: $textSize2;
+  }
+}
+
+.columnTwo {
+  div {
+    min-width: 200px;
+    min-height: 200px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: $titleColor6;
+    font-size: 100px;
+
+    @include center-ic(flex, center, center);
+  }
+}
+
+.warning {
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: $bgColor3;
+  color: $textColor2;
+}
+
+/* footer */
+.madeby {
+  flex-direction: column;
+  margin-top: 5vh;
+  padding: 5px 0;
+  width: 100%;
+  color: $textColor1;
+
+  p {
+    margin: 0;
+  }
+
+  @include center-ic(flex, center, center);
+}
